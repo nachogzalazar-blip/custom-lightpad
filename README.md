@@ -1,2 +1,9 @@
 # custom-lightpad
-Custom 9-key mechanical hackpad — KiCad PCB, XIAO RP2040, KMK firmware, and a 3D-printed case. Built for Hack Club Blueprint.
+# Mi Hackpad
+
+9-key mechanical macropad.
+
+## Components
+- Seeed XIAO RP2040
+- 9x Cherry MX switches
+- SK6812 Mini-E LED   
