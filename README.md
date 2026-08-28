@@ -1,4 +1,4 @@
-# custom-lightpad
+
 # Mi Hackpad
 
 9-key mechanical macropad.
