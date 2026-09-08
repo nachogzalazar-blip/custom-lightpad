@@ -1,43 +1,48 @@
 import board
+
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.scanners.keypad import KeysScanner
 from kmk.keys import KC
-from kmk.modules.macros import Press, Release, Tap, Macros
-from kmk.extensions.rgb import RGB
+from kmk.extensions.media_keys import MediaKeys
 
-keyboard = KMKKeyboard()
-macros = Macros()
-keyboard.modules.append(macros)
+KEY_PINS = [
+    board.GP2,     # Key 1
+    board.GP27,    # Key 2
+    board.GP7,     # Key 3
 
-rgb = RGB(pixel_pin=board.D10, num_pixels=1, val_limit=100, hue_default=0, sat_default=255, val_default=100)
-keyboard.extensions.append(rgb)
+    board.GP1,     # Key 4
+    board.GP3,     # Key 5
+    board.GP4,     # Key 6
 
-PINS = [
-    board.D0,
-    board.D1,
-    board.D2,
-    board.D3,
-    board.D4,
-    board.D5,
-    board.D6,
-    board.D7,
+    board.GP29,    # Key 7
+    board.GP6,     # Key 8
+    board.GP28,    # Key 9
 ]
 
+
+keyboard = KMKKeyboard()
+
 keyboard.matrix = KeysScanner(
-    pins=PINS,
+    pins=KEY_PINS,
     value_when_pressed=False,
+    pull=True,
 )
+
+keyboard.extensions.append(MediaKeys())
 
 keyboard.keymap = [
     [
-        KC.A, 
-        KC.B, 
-        KC.C,
-        KC.LWIN(KC.D),
-        KC.MACRO("Hello!"),
-        KC.MUTE,
-        KC.VOLU,
-        KC.VOLD,
+        KC.A,            # 1
+        KC.B,            # 2
+        KC.C,            # 3
+
+        KC.LWIN(KC.D),   # 4 - Mostrar escritorio
+        KC.M,            # 5
+        KC.MUTE,         # 6
+
+        KC.VOLD,         # 7 - Volumen -
+        KC.VOLU,         # 8 - Volumen +
+        KC.ENTER,        # 9
     ]
 ]
 
