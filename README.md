@@ -289,3 +289,7 @@ Repositorio:
 * CircuitPython
 * KMK Firmware
 * Python
+
+
+<img width="1366" height="768" alt="Captura de pantalla de 2026-08-28 08-08-10" src="https://github.com/user-attachments/assets/4767c765-327c-41a5-8d92-76111949dcf6" />
+<img width="1366" height="768" alt="cad" src="https://github.com/user-attachments/assets/40b44c74-4e5b-4104-88a5-6bd511df7fde" />
